@@ -1,0 +1,10 @@
+#cloud-config
+timezone: UTC
+
+package_update: true
+package_upgrade: true
+package_reboot_if_required: true
+
+runcmd:
+  - git clone https://github.com/dtag-dev-sec/t-pot-autoinstall.git /root/t-pot-autoinstall
+  - export TERM=xterm ; /root/t-pot-autoinstall/install.sh ubuntu 4 changeme
