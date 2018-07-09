@@ -109,10 +109,10 @@ Do you want to perform these actions?
 This will perform the following actions:
 
 1. Create EC2 security group
-- Start an Ubuntu instance
-- Update all packages and reboot if necessary
-- Install T-Pot and required dependencies
-- Reboot
+2. Start an Ubuntu instance
+3. Update all packages and reboot if necessary
+4. Install T-Pot and required dependencies
+5. Reboot
 
 ## Connecting to the Instance
 
