@@ -35,7 +35,7 @@ In `ec2/variables.tf`, change the following variables to correspond to your exis
 
 ### Admin Credentials
 
-In `cloud-config.xml`, change the password "*changeme*"
+In `cloud-init.yaml`, change the password "*changeme*"
 
 ```
   - export TERM=xterm ; /root/t-pot-autoinstall/install.sh ubuntu 4 changeme
