@@ -8,9 +8,15 @@ resource "aws_security_group" "tpot" {
   vpc_id      = "${var.ec2_vpc_id}"
   ingress {
     from_port   = 0
-    to_port     = 64294
+    to_port     = 64000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 64294
+    to_port     = 64294
+    protocol    = "tcp"
+    cidr_blocks = "${var.admin_ip}"
   }
   ingress {
     from_port   = 64295
@@ -23,12 +29,6 @@ resource "aws_security_group" "tpot" {
     to_port     = 64297
     protocol    = "tcp"
     cidr_blocks = "${var.admin_ip}"
-  }
-  ingress {
-    from_port   = 64298
-    to_port     = 65535
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
   }
   egress {
     from_port   = 0
