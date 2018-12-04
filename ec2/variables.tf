@@ -8,7 +8,7 @@ variable "ec2_vpc_id" {
   default     = "vpc-XXX"
 }
 
-variable "ec2_subnet" {
+variable "ec2_subnet_id" {
   description = "ID of AWS VPC subnet"
   default     = "subnet-YYY"
 }

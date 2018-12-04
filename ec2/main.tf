@@ -45,7 +45,7 @@ resource "aws_instance" "tpot" {
   ami           = "${var.ec2_ami["${var.ec2_region}"]}"
   instance_type = "${var.ec2_instance_type}"
   key_name      = "${var.ec2_ssh_key_name}"
-  subnet_id     = "${var.ec2_subnet}"
+  subnet_id     = "${var.ec2_subnet_id}"
   tags {
     Name        = "T-Pot Honeypot"
   }
