@@ -11,16 +11,20 @@ This repository contains [Terraform](https://www.terraform.io/) and [cloud-init]
 
 [T-Pot](https://github.com/dtag-dev-sec/tpotce) is a multi-honeypot platform that runs on Ubuntu and includes dockerized versions of the following honeypots:
 
+* [ciscoasa](https://github.com/Cymmetria/ciscoasa_honeypot)
 * [conpot](http://conpot.org/)
 * [cowrie](http://www.micheloosterhof.com/cowrie/)
 * [dionaea](https://github.com/DinoTools/dionaea)
 * [elasticpot](https://github.com/schmalle/ElasticPot)
-* [emobility](https://github.com/dtag-dev-sec/emobility)
-* [glastopf](http://glastopf.org/)
+* [glastopf](http://mushmush.org/)
+* [glutton](https://github.com/mushorg/glutton)
+* [heralding](https://github.com/johnnykv/heralding)
 * [honeytrap](https://github.com/armedpot/honeytrap/)
 * [mailoney](https://github.com/awhitehatter/mailoney)
+* [medpot](https://github.com/schmalle/medpot)
 * [rdpy](https://github.com/citronneur/rdpy)
-* [vnclowpot](https://github.com/magisterquis/vnclowpot)
+* [snare](http://mushmush.org/)
+* [tanner](http://mushmush.org/)
 
 ## Required Configuration Changes
 
@@ -28,20 +32,21 @@ This repository contains [Terraform](https://www.terraform.io/) and [cloud-init]
 
 In `ec2/variables.tf`, change the following variables to correspond to your existing EC2 infrastructure:
 
-* `admin_ip` - source IP address that you will use to administer the system. Ports 64295 (ssh) and 64297 (https) will be opened to this IP
+* `admin_ip` - source IP address(es) that you will use to administer the system. Connections to ports 64294, 64295 and 64297 will be allowed from this IP only. Multiple IPs or CIDR blocks can be specified in the format: `["127.0.0.1/32", "192.168.0.0/24"]`
 * `ec2_vpc_id`
-* `ec2_subnet`
+* `ec2_subnet_id`
 * `ec2_region`
 
 ### Admin Credentials
 
-In `cloud-init.yaml`, change the password "*changeme*"
+In `tpot.conf`, change the following variables:
 
 ```
-  - export TERM=xterm ; /root/t-pot-autoinstall/install.sh ubuntu 4 changeme
+myCONF_WEB_USER='webuser'
+myCONF_WEB_PW='w3b$ecret'
 ```
 
-This will be used to configure credentials for the T-Pot web interface. Refer to [Autoinstall T-Pot on Ubuntu 16.04.x](https://github.com/dtag-dev-sec/t-pot-autoinstall)
+This will be used to configure credentials for the T-Pot Kibana interface. Refer to [Options](https://github.com/dtag-dev-sec/tpotce#options) for more information.
 
 ## Initialising
 
