@@ -54,6 +54,6 @@ resource "aws_instance" "tpot" {
     volume_size           = 128
     delete_on_termination = true
   }
-  user_data              = "${file("../cloud-init.yaml")}"
+  user_data              = "${file("../cloud-init.yaml")}    content: ${base64encode(file("../tpot.conf"))}"
   vpc_security_group_ids = ["${aws_security_group.tpot.id}"]
 }
