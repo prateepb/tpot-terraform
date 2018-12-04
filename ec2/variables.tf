@@ -23,9 +23,9 @@ variable "ec2_ssh_key_name" {
 }
 
 # https://aws.amazon.com/ec2/instance-types/
-# t2.large = 2 vCPU, 8 GiB RAM
+# t3.large = 2 vCPU, 8 GiB RAM
 variable "ec2_instance_type" {
-  default = "t2.large"
+  default = "t3.large"
 }
 
 # Refer to https://cloud-images.ubuntu.com/locator/ec2/
