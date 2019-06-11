@@ -36,7 +36,7 @@ resource "aws_security_group" "tpot" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  tags {
+  tags = {
     Name = "T-Pot"
   }
 }
@@ -46,7 +46,7 @@ resource "aws_instance" "tpot" {
   instance_type = "${var.ec2_instance_type}"
   key_name      = "${var.ec2_ssh_key_name}"
   subnet_id     = "${var.ec2_subnet_id}"
-  tags {
+  tags = {
     Name        = "T-Pot Honeypot"
   }
   root_block_device {
