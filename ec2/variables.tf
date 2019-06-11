@@ -28,25 +28,25 @@ variable "ec2_instance_type" {
   default = "t3.large"
 }
 
-# Refer to https://cloud-images.ubuntu.com/locator/ec2/
+# Refer to https://wiki.debian.org/Cloud/AmazonEC2Image/Stretch
 variable "ec2_ami" {
   type    = "map"
   default = {
-    "ap-northeast-1" = "ami-0fd02119f1653c976"
-    "ap-northeast-2" = "ami-096560874cb404a4d"
-    "ap-northeast-3" = "ami-064d6dc91cdb4daa8"
-    "ap-south-1"     = "ami-01187fe59c07cd350"
-    "ap-southeast-1" = "ami-0efb24bbbf33a2fd7"
-    "ap-southeast-2" = "ami-03932cb7d3a1a69af"
-    "ca-central-1"   = "ami-0388b9f812caf5c3f"
-    "eu-central-1"   = "ami-080d06f90eb293a27"
-    "eu-west-1"      = "ami-02790d1ebf3b5181d"
-    "eu-west-2"      = "ami-06328f1e652dc7605"
-    "eu-west-3"      = "ami-0697abcfa8916e673"
-    "sa-east-1"      = "ami-04fb8967affdf73b6"
-    "us-east-1"      = "ami-0d2505740b82f7948"
-    "us-east-2"      = "ami-0cf8cc36b8c81c6de"
-    "us-west-1"      = "ami-09c5eca75eed8245a"
-    "us-west-2"      = "ami-0f05ad41860678734"
+    "ap-northeast-1" = "ami-09fbcd30452841cb9"
+    "ap-northeast-2" = "ami-08363ccce96df1fff"
+    "ap-south-1"     = "ami-0dc98cbb0d0e49162"
+    "ap-southeast-1" = "ami-0555b1a5444087dd4"
+    "ap-southeast-2" = "ami-029c54f988446691a"
+    "ca-central-1"   = "ami-04413a263a7d94982"
+    "eu-central-1"   = "ami-01fb3b7bab31acac5"
+    "eu-north-1"     = "ami-050f04ca573daa1fb"
+    "eu-west-1"      = "ami-0968f6a31fc6cffc0"
+    "eu-west-2"      = "ami-0faa9c9b5399088fd"
+    "eu-west-3"      = "ami-0cd23820af84edc85"
+    "sa-east-1"      = "ami-030580e61468e54bd"
+    "us-east-1"      = "ami-0357081a1383dc76b"
+    "us-east-2"      = "ami-09c10a66337c79669"
+    "us-west-1"      = "ami-0adbaf2e0ce044437"
+    "us-west-2"      = "ami-05a3ef6744aa96514"
   }
 }
