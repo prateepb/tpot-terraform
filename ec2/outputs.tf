@@ -9,3 +9,4 @@ output "SSH_Access" {
 output "Web_UI" {
   value = "https://${aws_instance.tpot.public_dns}:64297/"
 }
+

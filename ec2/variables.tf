@@ -30,7 +30,7 @@ variable "ec2_instance_type" {
 
 # Refer to https://wiki.debian.org/Cloud/AmazonEC2Image/Stretch
 variable "ec2_ami" {
-  type    = "map"
+  type = map(string)
   default = {
     "ap-northeast-1" = "ami-09fbcd30452841cb9"
     "ap-northeast-2" = "ami-08363ccce96df1fff"
@@ -50,3 +50,4 @@ variable "ec2_ami" {
     "us-west-2"      = "ami-05a3ef6744aa96514"
   }
 }
+
